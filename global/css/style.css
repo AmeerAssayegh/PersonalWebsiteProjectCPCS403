@@ -1,0 +1,968 @@
+
+/*-------------------------------------------*/
+/* Basic setup */
+/*-------------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #646464;
+    background-image: url(../../images/background_logo/MainBackground-min.jpg);
+    /*background-position: center;*/
+    background-attachment: fixed;
+    background-size: cover;
+    /*height: 35vh;*/
+    color: #ffffff;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    /*text-rendering: optimizeLegibility;*/
+    overflow-x: hidden;
+    
+}
+
+/*.clearfix {zoom:1}*/
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*-------------------------------------------*/
+/* Reusable Component */
+/*-------------------------------------------*/
+
+
+.row{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+section{
+    /*padding: 10px 0px;*/
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+}
+
+.box{
+    padding: 1%;
+}
+
+/*---- Links ------*/
+
+a:link,
+a:visited{
+    text-decoration: none;
+    color: #fdeda7;
+    padding-bottom: 1px;
+    /*border-bottom: 0 solid #fdeda7;*/
+    -webkit-transition: border-bottom 1s, color 1s;
+    -webkit-transition: border-bottom 0.5s, color 0.5s;
+    transition: border-bottom 0.5s, color 0.5s;
+}
+
+a:hover,
+a:active {
+    color: #ffa96a;
+    font-weight: 500;
+    border-bottom: 0px solid #ffa96a;
+}
+
+
+/* text */
+h2{
+    width: 100%;
+    text-align: center;
+    color: #00ffce;
+    text-shadow: 0px 2px 25px #000000 ;
+    margin-bottom: 45px;
+    font-size: 150%;
+}
+
+hr{
+    color: #fdeda7;
+    margin-top: 4%;
+}
+
+
+/*-------------------------------------------*/
+/* Header */
+/*-------------------------------------------*/
+header{
+    height: auto;
+    margin-bottom: 80px;
+}
+
+.ameerPic {
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#logo{
+    width: 100%;
+    border-radius: 5px;
+    border-color: #efefef;
+    border: 0px solid #ffffff;
+    -webkit-box-shadow: 0 2px 80px #daebef;
+    box-shadow: 0 2px 80px #daebef;
+    
+}
+
+/*---- myName ------*/
+.myName h1{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #07d8b0;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-shadow: 0px 2px 30px #000000 ;
+}
+
+/*---- Main Nav ------*/
+.mainNav{
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+    margin-top: 1px;
+    margin-bottom: 15px;
+    /*border: 2px solid #fff ;
+    border-radius:10px;*/
+}
+
+
+
+/*.mainNav a{
+    color: #fff;
+}*/
+
+
+.mainNav li {
+    margin: 0 auto;
+    display: inline-block;
+    margin:  0px 15px;
+    
+}
+
+/*Mobile Navi*/
+.mobilNav{
+    
+    width: 100%;
+    text-align: center;
+    background-color: rgba(60, 80, 87, 0.8);
+    -webkit-box-shadow: 0px 0px 80px #000000;
+    box-shadow: 0px 0px 80px #000000;
+    cursor: pointer;
+    display: none;
+    
+}
+.mobile-nav-icon{
+    width: 100%;
+    margin-top: 20px;
+    
+}
+.mobile-nav-icon i{
+    width: 100%;
+    font-size: 160%;
+    color: #faffba;
+    text-shadow: 0 0 10px #faffba;
+}
+/* Sticky navi */
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(59, 66, 67, 0.9);
+    -webkit-box-shadow: 0 5px 80px #000000;
+    box-shadow: 0 5px 80px #000000;
+    z-index: 9999;
+}
+
+.sticky .mainNav{
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    list-style: none;
+    margin-top: 0.2%;
+    margin-bottom: 0.2%;
+    
+    /*border: 2px solid #fff ;
+    border-radius:10px;*/
+}
+
+.sticky .mainNav li a:hover,
+.sticky .mainNav li a:active {
+    margin: 0 auto;
+    display: inline-block;
+    color: #00ffce;
+}
+
+/*==============================================================================*/
+/*================================ For Animation ===============================*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3,
+.js--wp-4
+{
+    opacity: 0;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated,
+.js--wp-4 .animated {
+    opacity: 1;
+}
+
+
+/*==============================================================================*/
+/*================================ Home Page ==================================*/
+
+
+/*-------------------------------------------*/
+/* Section 1: welcome-containt */
+/*-------------------------------------------*/
+.welcom{
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+    
+}
+
+.welcom p{
+    margin: 0 auto;
+    width: 100%;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #f5f8c2;
+}
+
+.welcom a {
+    text-decoration: none;
+    color: #07d8b0;
+}
+
+.welcom a:hover, a:active{
+    color: #ffa96a;
+    font-weight: 500;
+    border-bottom: 0px solid #ffa96a;
+}
+#messag{
+    text-align: center;
+    color: #fff500;
+    background-color: #d10909;
+    border-radius: 10px;
+}
+/*-------------------------------------------*/
+/* Section 2: PrayerTime-containt */
+/*-------------------------------------------*/
+.PrayerTime{
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #f5f8c2;
+    text-align: center;
+    padding-top: 45px;
+}
+
+#pTime{
+    margin-bottom: 25px;
+    margin-top: 2%;
+    
+}
+
+
+/*-------------------------------------------*/
+/* Section 3: myLinks-containt */
+/*-------------------------------------------*/
+.myLinks{
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #f5f8c2;
+}
+
+.myLinks h4{
+    /*color: #f8fdb2;*/
+}
+
+.myLinks p{
+    margin-bottom: 10px;
+    
+}
+
+.myLinks a {
+    text-decoration: none;
+    color: #07d8b0;
+}
+
+.myLinks a:hover, a:active{
+    color: #ffa96a;
+    font-weight: 500;
+    border-bottom: 0px solid #ffa96a;
+}
+.links-containt{
+    margin-top: 45px;
+}
+
+/*.myLinks a:link, a:visited {
+    /*color: #07d8b0;*/
+    /*border-bottom: 1px solid #09edc1;
+    transition: border-bottom 0.2s, color 0.2s;
+
+}*/
+
+/*.myLinks a:hover, a:active{
+    /*color: #fdeda7;*/
+    /*border-bottom: 3px solid #fdeda7 ;
+
+}*/
+
+/*-------------------------------------------*/
+/* Section 4: MyBlog Section-containt */
+/*-------------------------------------------*/
+.myBlogSec{
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #f5f8c2;
+}
+
+.myBlogSec p{
+    margin: 20px;
+    text-align: center;
+}
+
+.myBlogSec a {
+    text-decoration: none;
+    color: #07d8b0;
+}
+
+.myBlogSec a:hover, a:active{
+    color: #ffa96a;
+    font-weight: 500;
+    border-bottom: 0px solid #ffa96a;
+}
+/*-------------------------------------------*/
+/* Footer  */
+/*-------------------------------------------*/
+footer{
+    background-color: rgba(255, 247, 247, 0.17);
+    width: 100%;
+    margin: 0px auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.footer-nav {
+    list-style: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.55);
+    /*font-size: 18px;*/
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    
+}
+
+.footer-nav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-nav a:hover, a:active {
+    color: #f8fdb2;
+    border-bottom: 0px solid #f8fdb2 ;
+    font-weight: 500;
+}
+
+.footer-nav li{
+    display: inline-block;
+    margin: 0 10px;
+}
+#Twitter{color: #00baff; font-size: 120%; text-shadow: 0 0px 10px #00baff;}
+#linkedIn{color: #0579ce; font-size: 120%; text-shadow: 0 0px 10px #0579ce;}
+#copyright {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+    font-size: 16px;
+    
+}
+.ValidationLinkd{width: 100%; text-align: center; margin-top: 5px;}
+.ValidationLinkd li{ margin: 0 5px; display: inline-block;}
+#HTML5icon, #CSS3icon {color: rgba(255, 255, 255, 0.55);}
+#HTML5icon:hover {color: #ff6c00; font-size: 120%; text-shadow: 0 0px 10px #ffab6e;}
+#CSS3icon:hover {color: #0062ff; font-size: 120%; text-shadow: 0 0px 10px #ffffff;}
+/*==============================================================================*/
+/*================================ About Page ==================================*/
+.about-web{
+    margin-bottom: 60px;
+    -webkit-box-shadow: 0 6px 60px #070707;
+    box-shadow: 0 6px 60px #070707;
+}
+
+.about-web p{
+    width: 100%;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 30px;
+    color: #fbfdd3;
+}
+
+.about-web a {
+    text-decoration: none;
+    color: #07d8b0;
+}
+
+.about-web a:hover, a:active{
+    color: #ffa96a;
+    font-weight: 500;
+    border-bottom: 0px solid #ffa96a;
+}
+
+/*==============================================================================*/
+/*================================ Contact Page ================================*/
+.contactMe{
+    
+    margin-bottom: 4%;
+    -webkit-box-shadow: 0 6px 60px #000000;
+    box-shadow: 0 6px 60px #000000;
+}
+ 
+.contactMe p {
+    margin: 0 auto;
+    text-align: center;
+    
+    font-size: 20px;
+    color: #f8fdb2;
+}
+
+.contact-form{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+.contact-form p{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.contentForm{
+    width: 100%;
+    margin: 0 auto;
+}
+.input-label {
+    margin: 0px;
+    display: inline-block;
+    width:20%;
+    font-size: 24px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    color: #fdeda7;
+}
+
+ .input-data {
+    display: inline-block;
+    width: 50%;
+    
+    margin: 10px 20px;
+}
+.input-data input{
+    width: 100%;
+    font-size: 18px;
+}
+
+.input-data textarea{
+    width: 100%;
+    height: 200px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+#btnEmail{
+    width: 90px;
+    margin: 0 90%;
+    
+}
+
+.contactMe i{
+    text-align: left;
+    margin-right: 15px;
+    vertical-align: middle;
+    font-size: 150%;
+    color: #00edc0;
+}
+.contactMe a {
+    text-decoration: none;
+    color: #00edc0;
+}
+
+.contactMe a:hover, a:active{
+    color: #ffa96a;
+    font-weight: 500;
+    border-bottom: 0px solid #ffa96a;
+}
+
+
+
+.form-messages {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.success {
+    color: #ffffff;
+    background-color: rgba(49, 181, 32, 0.8);
+}
+.error { 
+    color: #ffffff;
+    background-color: rgba(188, 65, 65, 0.74);
+}
+
+#feedb-link{
+    margin-top: 4%;
+}
+
+/*==============================================================================*/
+/*================================ MyResume Page ===============================*/
+.MyResume{
+    margin-bottom: 4%;
+    -webkit-box-shadow: 0 6px 60px #000000;
+    box-shadow: 0 6px 60px #000000;
+    padding: 8px;
+}
+#ResumePic {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+}
+
+#resumePic img{
+    width: 14%;
+    height: auto;
+    margin-left:  43%;
+    margin-right: 43%;
+    margin-bottom: 2%;
+    border-radius: 200px;
+    -webkit-box-shadow: 0 6px 60px #000000;
+    box-shadow: 0 6px 60px #000000;
+}
+
+.Resume-content{
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.Resume-content h3{
+    width: 35%;
+    background-color: rgba(4, 147, 120, 0.54);
+    text-align: left;
+    border-radius: 15px;
+    padding: 2px 0 2px 30px;
+    margin-bottom: 2.5%;
+    -webkit-box-shadow: 0 6px 20px #000000;
+    box-shadow: 0 6px 20px #000000;
+    
+}
+
+.Resume-content p{
+    
+    color: #fcffd8;
+    text-align: justify;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-size: 95%;
+}
+
+.Resume-content h4{
+    padding: 2px 0 2px 30px;
+    margin-bottom: 1%;
+    color: #00ffce;
+    font-size: 97%;
+}
+
+/*Skills Table*/
+.skillsTable {
+    width: 100%;
+    color: #fcffd8;
+    margin-left: 0px;
+    margin-bottom: 2%;
+}
+.skillsTable2{
+    display: none;
+    width: 100%;
+    font-size: 70%;
+    text-align: left;
+    padding: 0;
+}
+.skillsTable2 td{
+    width: 65%;
+}
+
+.project{
+    margin-bottom: 1%;
+}
+
+/* Courses and Certificates */
+.courCerti {
+    width: 100%;
+    margin-bottom: 1.5%;
+}
+
+/* Language in MyResume */
+.res-language{
+    width: 100%;
+    margin-bottom: 1%;
+    
+}
+.res-language h4{
+    width: 100%;
+    margin-bottom: 0.5%;
+}
+.res-language p{
+    margin-left: 4%;
+}
+
+.Resume-PDFlink{
+    width: 100%;
+    text-align: center;
+    margin: 4% 0 1% 0;
+}
+
+.Resume-PDFlink a{
+    color: #07d8b0;
+}
+
+.Resume-PDFlink a:hover, a:active {
+    color: #d8b807;
+    font-weight: 500;
+    border-bottom: 0px solid #ffa96a;
+}
+
+.pdf-text{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+    color: #fbffc9;
+}
+.pdf-text a{
+    color: #07d8b0;
+}
+.pdf-text a:hover,a:active{
+    color: #ffa96a;
+    border-bottom: 0px solid #ffa96a;
+}
+#myPDFCV {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 5%;
+    
+}
+
+
+/*==============================================================================*/
+/*================================ MyGallery Page ==============================*/
+
+.MyGallery{
+    margin-bottom: 4%;
+    -webkit-box-shadow: 0 6px 60px #000000;
+    box-shadow: 0 6px 60px #000000;
+}
+
+.albumList{
+    width: auto;
+    text-align: center;
+    display: inline-block;
+    margin-left: 4%;
+}
+
+.albumList a:hover,a:active {
+    color: #07d8b0;
+}
+
+/*================================ MyGallery_403 Page ========================*/
+
+/*----------------- Album 1 --------------------*/
+.MyGallery-403{
+    background-color: rgba(0, 0, 0, 0.58);
+    margin-bottom: 4%;
+    -webkit-box-shadow: 0 6px 40px #ffffff;
+    box-shadow: 0 6px 40px #ffffff;
+}
+
+.Albym-video{
+    width: 100%;
+    
+}
+
+.Albym-video h3{
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.youtubeVideo{
+    width: 100%;
+    margin-bottom: 4%;
+}
+.youtubeVideo iframe{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+/* -------- Video Pges  --------*/
+.back-link{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.back-link a:hover, a:active{
+    color: #d80737;
+}
+
+/*----------------- Album 2 --------------------*/
+.MyGallery-Graduation{
+    background-color: rgba(0, 0, 0, 0.58);
+    margin-bottom: 4%;
+    -webkit-box-shadow: 0 6px 40px #ffffff;
+    box-shadow: 0 6px 40px #ffffff;
+}
+
+#Album-description{
+    text-align: justify;
+    
+}
+
+/*------ Slideshow container ------*/
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    /*height: 40%;*/
+    width: auto;
+    margin-top: 25%;
+    
+    padding: 10px;
+    /*padding: 5% 1%;*/
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 200%;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    vertical-align: middle;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* links of slide show container*/
+.slideshow-container a:hover, a:active{
+    color: #09edc1;
+    
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 100%;
+    padding: 0;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.69);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 100%;
+    padding: 8px 0px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    text-align: center;
+    width: 22%;
+    
+    
+    
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.al1-long-img{
+    width: 39%;
+}
+
+.slideshow-container p {
+    text-align: center;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*==============================================================================*/
+/*================================ Feedback Page ==============================*/
+
+.feedback{
+    margin-bottom: 4%;
+    -webkit-box-shadow: 0 6px 60px #000000;
+    box-shadow: 0 6px 60px #000000;
+    
+}
+
+#soonText{
+    text-align: center;
+    color: #ff9d00;
+}
+
+#feed-msg, span{
+    width: 100%;
+    color: #ff6363;
+}
+/*visitor information*/
+.visitorInfo{
+    width: 100%;
+    margin-top: 2%;
+    color: #f8fdb2;
+}
+
+legend{
+    color: #03ffcf;
+}
+
+.blocklabel {
+    display: block;
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+
+.inputFText{
+    margin-left: 2%;
+    width: 45%;
+    font-size: 90%;
+    /*border-width: 4px;*/
+}
+
+#lname{ margin-left: 2.2%;}
+#pGenderS{
+    margin-left: 4.5%;
+    font-size: 70%;
+    width: 15.5%;
+}
+#email{margin-left: 6%;}
+#countryS{
+    width: 15%;
+    margin-left: 5%;
+    font-size: 70%;
+}
+
+.FeedbackQuestions{
+    width: 98%;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+.fbAns{
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-right: 0.5%;
+}
+
+.feedback-usr{margin-top: 4%;}
+
+#comments{
+    width: 52%;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    font-size: 80%;
+}
+.fb-btn{
+    text-align: center;
+    font-size: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2%;
+}
+
+.fbButtons h2{
+    text-align: center;
+}
+

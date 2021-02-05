@@ -1,0 +1,329 @@
+
+/*
+@media only screen and (max-width: 1188px){
+    .myBlogSec p{
+        margin: 15px;
+        font-size: 91%
+    }
+}
+*/
+/* big tablet to 1200(width smaller than the 1140px row) */
+@media only screen and (max3-width: 1200px){
+    
+    
+    /*********** Home page ************/
+    /*for My Name in header*/
+    .myName h1{
+        font-size: 180%
+    }
+    /*for main naigation list*/
+    .mainNav{
+        width: 100%;
+        font-size: 95%;
+        display: inline-block;
+    }
+    .mainNav li {
+        margin:  0px 14px;
+        
+    }
+    /***section 1 welcom***/
+    .welcom p{
+        font-size: 90%;
+    }
+    /***section 3 Links***/
+    .myLinks h4{
+        font-size: 95%
+    }
+    /***section 4 Blog***/
+    .myBlogSec p{
+        margin: 15px;
+        font-size: 90%
+    }
+    /*** footer ***/
+    footer{
+        font-size: 100%;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    
+    
+    
+    
+}
+
+/* small tablet to big tablet from 701 to 1028px */
+@media only screen and (max-width: 1028px){
+    /*********** Home page ************/
+    /*for My Name in header*/
+    .myName h1{
+        font-size: 170%
+    }
+    
+    /*for main naigation list*/
+    .mainNav{
+        width: 100%;
+        font-size: 90%;
+        display: inline-block;
+        
+    }
+    .mainNav li {
+        margin:  0px 10px;
+        
+    }
+    
+    /***section 1 welcom***/
+    .welcom p{
+        font-size: 85%;
+    }
+    /***section 3 Links***/
+    .myLinks h4{
+        font-size: 90%
+    }
+    /***section 4 Blog***/
+    .myBlogSec p{
+        margin: 8px;
+        font-size: 17px;
+    }
+    /*********** My Resume page ************/
+    #resumePic img{
+        width: 15%;
+        border-radius: 200px;
+        margin-left:  42%;
+        margin-right: 42%;
+    }
+    
+    .Resume-content p{
+        font-size: 90%;
+    }
+    
+    /*Skills Table*/
+    .skillsTable {
+        margin-left: 1.5%;
+        font-size: 95%;
+    }
+    /*Skills Table*/
+    .skillsTable {
+        width: 100%;
+        margin-left: 0px;
+        font-size: 90%;
+        
+    }
+    
+    
+    /*** footer ***/
+    footer{
+        font-size: 90%;
+    }
+    #copyright {
+        font-size: 15px;
+    }
+    
+}
+
+
+
+/* small phones and small tablets: from 451 to 700px */
+@media only screen and (max-width: 800px){
+    /*********** Home page ************/
+    /*My Name in logo*/
+    .myName h1{
+        margin-top: 1%;
+        margin-bottom: 10%;
+    }
+    /*** main Nav ***/
+    .mainNav{ 
+        display: none;
+        width: 100%;
+        background-color: rgba(40, 74, 78, 0.61);
+        
+    }
+    /*** main Nav mobile ***/
+    .mobilNav{ display: inline-block;}
+    /*.mainNav{
+        float: left;
+    }*/
+    .mainNav li {
+        display: block;
+       
+    }
+    
+    .mainNav a {
+        width: 100%;
+        }
+    
+    .mainNav li a:link,
+    .mainNav li s:visited {
+        display: block;
+        border: 0;
+        padding: 5px 0;
+    }
+    
+    /*********** My Resume page ************/
+    #resumePic img{
+        width: 17%;
+        margin-left:  41%;
+        margin-right: 41%;
+        border-radius: 100px;
+    }
+    
+    .Resume-content h3{
+        width: 45%;
+        font-size: 100%;
+    }
+    
+    /*Skills Table*/
+    .skillsTable {
+        width: 103%;
+        margin-left: 2px;
+        font-size: 80%;
+        
+        
+    }
+    .Resume-content p{
+        font-size: 90%;
+    }
+    
+    .Resume-PDFlink{
+        font-size: 90%;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 605px){
+    /*********** Home page ************/
+    h2{
+        font-size: 140%;
+    }
+    /* Section 1 welcome */
+    .welcom p{
+    font-size: 84%;
+    }
+    /* Section 3 Links */
+    .myLinks h4{
+        text-align: center;
+    }
+    .myLinks p{
+        text-align: center;
+    }
+    
+    /*********** My Resume page ************/
+    #resumePic img{
+        width: 25%;
+        margin-left:  37%;
+        margin-right: 37%;
+    }
+    
+    .Resume-content h3{
+        width: 100%;
+        text-align: center;
+        padding: 2px 0 2px 0px;
+    }
+    
+    
+    .Resume-content h4{
+        padding: 0px 0px 0px 8px;
+        margin-bottom: 1%;
+        font-size: 80%;
+    }
+    
+    .Resume-content p{
+
+        color: #fcffd8;
+        text-align: justify;
+        margin-left: 2%;
+        margin-right: 0;
+        font-size: 80%;
+    }
+    td{
+        width: 0px;
+        margin-left: 0px;
+        padding: 0px;
+        font-size: 95%;
+    }
+    /* project section*/
+    .project p{
+        width: 100%;
+        font-size: 80%;
+        
+    }
+    
+    .Resume-PDFlink{
+        font-size: 80%;
+    }
+    
+    /*** footer ***/
+    footer{
+        font-size: 80%;
+    }
+    #copyright {
+        font-size: 80%;
+    }
+    
+    
+    
+}
+
+@media only screen and (max-width: 695px){
+     .skillsTable{
+        display: none;
+    }
+    .skillsTable2{
+        width: 100%;
+        display:inline-table;
+        font-size: 90%;
+        
+    }
+    
+}
+/* small phones from 0 to 450px */
+@media only screen and (max-width: 451px){
+    /**********************************/
+    /*********** Home page ************/
+    h2{
+        font-size: 120%;
+    }
+    /* Section 1 welcome */
+    .welcom p{
+    font-size: 75%;
+    }
+    /* Section 3 Links */
+    .myLinks h4{
+        font-size: 76%;
+    }
+    /* Section 4 Blog */
+    .myBlogSec p{
+        font-size: 80%;
+        text-align: justify;
+    }
+    /*********** Resume page ************/
+    .skillsTable{
+        display: none;
+    }
+    .skillsTable2{
+        width: 100%;
+        display:inline-table;
+        font-size: 80%;
+        
+    }
+    
+    .project p {
+        text-align: left;
+        font-size: 72%;
+    }
+    
+    /* Courses and Certificates */
+    .courCerti p{
+        text-align: left;
+        
+    }
+    /*** footer ***/
+    footer{
+        font-size: 80%;
+    }
+    #copyright {
+        font-size: 13.5px;
+    }
+    
+}
